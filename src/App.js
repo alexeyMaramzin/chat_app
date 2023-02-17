@@ -17,7 +17,6 @@ function App() {
                <Route path="/marketing" element={<Chat chat='marketing'/>}/>
                <Route path="/thailand" element={<Chat chat='thailand'/>}/>
                <Route path="/italy" element={<Chat chat='italy'/>}/>
-               <Route path="/italy" element={<Chat chat='italy'/>}/>
                <Route path="*" element={<div style={{margin: '50px 0 0 100px', fontSize: '30px'}}>Not found</div>}/>
            </Routes>
        </Router>
