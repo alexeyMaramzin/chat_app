@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px; /*Закругление ползунка*/
+    background-color: #808080; /*Цвет ползунка*/
+}
+::-webkit-scrollbar {
+    width: 6px;  /*Толщина скролла*/
+}
+#root{
+    background-image: url("/src/images/Photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.App{
+    display: flex;
+    max-height: 100vh;
+}
+.left_sidebar{
+    width: 72px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+}
+.navigation{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 70vh;
+}
+.navigation::-webkit-scrollbar{
+    width: 0;
+}
+.sidebar_icon{
+    width: 42px;
+    margin: 9px 9px 2px 9px;
+}
+.sidebar_plus{
+    width: 15px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #1C1D1D;
+    position: absolute;
+    bottom: 32px;
+    left: 6px;
+}
+.macos{
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.macosDots:nth-child(1){
+    background-color: #FF6059;
+}
+.macosDots:nth-child(2){
+    background-color: #FFBE2F;
+}
+.macosDots{
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 4px;
+    background-color: #28CA42;
+}
+.navigation > .active{
+    display: block;
+    opacity: 100%;
+    transition: 200ms;
+}
+.nonactive__link{
+    opacity: 25%;
+}
+/*Nomad list*/
+.nomad_list{
+    width: 280px;
+    background-color: rgba(37, 39, 42, 0.75);
+    font-family: Lato, sans-serif;
+    color: #B5B5B5;
+    padding: 35px 26px;
+    overflow: hidden;
+}
+.nomad_list__title{
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.channels{
+    max-height: 30vh;
+    overflow-y: auto;
+    margin-top: 10px;
+    overflow-x:hidden;
+}
+.channels > .active{
+    background-color: rgb(111, 111, 111);
+    width: 198px;
+    color: white;
+    border-radius: 5px;
+    display: block;
+}
+.channels > .active > .channels__item {
+    color: white;
+}
+#arrow-icon{
+    margin: 0 0 2px 5px;
+}
+#options-icon{
+    float: right;
+    margin-top: 6px;
+}
+.nomad_list__treads{
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 30px;
+}
+#message-icon{
+    vertical-align: middle;
+    margin-right: 11px;
+}
+.nomad_list__channels-title, .nomad_list__friend-title{
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin-top: 31.5px;
+    display: flex;
+    justify-content: space-between;
+}
+.channels__item {
+    list-style-type: none;
+    margin: 0 7px;
+    display: flex;
+    align-items: center;
+    padding: 6px 13px 9px 13px;
+    color: #B5B5B5;
+}
+.friends{
+    overflow-y: auto;
+    margin-top: 30px;
+    max-height: 33vh;
+}
+.friends__item {
+    list-style-type: none;
+    margin: 0 7px 12px;
+    display: flex;
+    align-items: center;
+}
+.circle-icon{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #666666;
+}
+.circle-icon__active{
+    background-color: #70CC16;
+}
+.friends__item-img{
+    margin-left: 10px;
+}
+.friends__item-name{
+    margin-left:12px;
+}
+/*chat*/
+.chat{
+    font-family: Lato, sans-serif;
+    background-color: white;
+    width: 100%;
+    position: relative;
+}
+.chat__header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(163, 163, 163, 0.45);
+    padding: 35px 20px 20px;
+}
+.chat__header-title{
+    display: flex;
+    font-size: 20px;
+}
+.star-icon{
+    margin: 3px 0 0 6px;
+}
+.people-icon{
+    margin: 8px;
+ }
+.chat_header-people{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 6px 20px 0 0;
+    color: #A4A4A4;
+}
+.chat__header-right{
+    display: flex;
+}
+.search{
+    padding: 3px 13px 3px;
+    border: 1px solid rgba(163, 163, 163, 0.65);
+    border-radius: 5px;
+    background-color: white;
+}
+.chat__search{
+    border: none;
+    padding: 3px;
+    color: grey;
+}
+.chat__search:focus{
+    outline: 0;
+}
+.chat__search::placeholder{
+    color: rgba(163, 163, 163, 0.95);
+}
+.bell-icon{
+    margin: 6px 0 0 20px;
+}
+.burger-icon{
+    margin: 4px 0 0 20px;
+}
+/*Message*/
+.message{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.message__area{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(117, 116, 116, 0.4);
+}
+.message__area-left{
+    display: flex;
+}
+.clip-icon{
+    margin: 30px 18px 0 22px;
+}
+.microphone-icon{
+    margin-right: 18px;
+    margin-top: 30px;
+}
+.smile-icon{
+    margin: 26px 22px 0 0;
+}
+.message__field{
+    padding:26px 0;
+}
+.message__field-input{
+    padding: 6px 400px 6px 20px;
+    color:rgba(128, 128, 128, 0.9);
+    max-width: 3000px;
+    width: 100%;
+    outline: none;
+    border: none;
+    white-space: normal;
+}
+.message__field-input::placeholder{
+    color: rgba(128, 128, 128, 0.8);
+}
+#message__list{
+    overflow: scroll;
+    max-height: 82vh;
+}
+.message__list-item{
+    margin: 28px 20px 20px 60px;
+    font-family: Lato, sans-serif;
+    font-size: 13px;
+    display: flex;
+}
+.message__list-item > div{
+    line-height: 20px;
+    margin: -3px 0 0 5px;
+}
+.message__guest-icon{
+    width: 33px;
+    height: 34px;
+}
+.message__list-username{
+    font-weight: 700;
+    height: 10px;
+}
+.guest-icon{
+    width: 40px;
+}
+
+
+
